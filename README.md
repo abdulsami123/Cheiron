@@ -203,6 +203,7 @@ For the implementation part Claude and Claude code were leveraged. I gathered th
 Given more time I have a few ideas to make this even more robust : 
 1. Having an LLM as a judge to evaluate outputs
 2. Adding tracebility so that its easier to identify which part of the service would be failing
+3. This is maybe not much of an improvement but more of a mantra , with LLMs I have found there will always be edge cases and you have to constantly keep updating it to make your harness as robust as possible, I have tried to that here and ofcourse I accept the notion that there is oppurtunities for making the system prompts better, putting more guardrails to ensure data safety 
 I also was wary of what the constraints were so I have made certain assumptions and went with them like the 120k LLM limit since larger data injected into the prompted will start costing alot per query.
 
 
