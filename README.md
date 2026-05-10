@@ -195,17 +195,23 @@ For the implementation part Claude and Claude code were leveraged. I gathered th
   openAI: The main edge here was the strucuted output that openAI gives and the gpt-4.1 supports with 1M context window.
   So after the stack was deciding the schemas and then the system prompts for the LLM calls for Essie syntax to Natural language conversion and visualization decisioning. Once that was done I handed off the implementation to Claude.
 
-## Improvements : 
+## Improvements 
+
 Given more time I have a few ideas to make this even more robust : 
 1. Having an LLM as a judge to evaluate outputs
 2. Adding tracebility so that its easier to identify which part of the service would be failing
 I also was wary of what the constraints were so I have made certain assumptions and went with them like the 120k LLM limit since larger data injected into the prompted will start costing alot per query.
 
 
-## Demo link :
+## Demo link
+
 <https://youtu.be/UhpkIlKLQ84>
 
-## Example runs : 
+## Example runs
+
+<Example 1>
+
+```json 
 1. query : how has the number of trials for Pembrolizumab changed since 2015
 {
   "visualization": {
@@ -324,7 +330,8 @@ I also was wary of what the constraints were so I have made certain assumptions 
     "generated_at": "2026-05-10T07:24:04.696689Z"
   }
 }
-
+```
+</Example 1>
 2. how are cancer trials distributed across phases
 
 {
