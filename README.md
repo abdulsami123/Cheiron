@@ -186,9 +186,20 @@ To run the frontend :
 uv run python -m frontend.app
 
 Key Decisions : 
-
+The thought process involved into building this first required a thorough inspection of the endpoints and how they could be leveraged. I realised after a while that simple Natural language was not working and first needed to be translated into Essie Syntax Expression. Right now the primary interface is through the /Studies endpoint since that covers the majority of cases for a chat agent and inside it we have utilized the query parameters mainly since that was the main task. The filter parameters inside the application can also be leveraged but for now I felt to get to v1 this was a good checkpoint.
+Another decision I made was deciding to go for a simpler chained workflow rather than a complex graph based flow.
+For the implementation part Claude and Claude code were leveraged. I gathered the requirements, came up with my solution and to optimize the prompt for implementation worked with claude to optimize it. I had a preference for my stack : 
+ fastapi: Chose it for the simplicity it offers and its Async first nature 
+ httpx: A fast Async library that has a syntax very similar to the requests library so its just convenient
+  uv: I can't begin to thank the guys at astral for making uv
+  openAI: The main edge here was the strucuted output that openAI gives and the gpt-4.1 supports with 1M context window.
+  So after the stack was deciding the schemas and then the system prompts for the LLM calls for Essie syntax to Natural language conversion and visualization decisioning. Once that was done I handed off the implementation to Claude.
 
 Improvements : 
+Given more time I have a few ideas to make this even more robust : 
+1. Having an LLM as a judge to evaluate outputs
+2. Adding tracebility so that its easier to identify which part of the service would be failing
+I also was wary of what the constraints were so I have made certain assumptions and went with them like the 120k LLM limit since larger data injected into the prompted will start costing alot per query.
 
 
 Demo link :
