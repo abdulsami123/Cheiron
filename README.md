@@ -210,7 +210,7 @@ I also was wary of what the constraints were so I have made certain assumptions 
 ## Example runs
 
 <Example 1>
-
+<summary>View Payload</summary>
 ```json 
 1. query : how has the number of trials for Pembrolizumab changed since 2015
 {
