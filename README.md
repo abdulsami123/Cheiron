@@ -195,7 +195,8 @@ For the implementation part Claude and Claude code were leveraged. I gathered th
  httpx: A fast Async library that has a syntax very similar to the requests library so its just convenient
   uv: I can't begin to thank the guys at astral for making uv
   openAI: The main edge here was the strucuted output that openAI gives and the gpt-4.1 supports with 1M context window.
-  So after the stack was deciding the schemas and then the system prompts for the LLM calls for Essie syntax to Natural language conversion and visualization decisioning. Once that was done I handed off the implementation to Claude.
+  So after the stack was deciding the schemas and then the system prompts for the LLM calls for Essie syntax to Natural language conversion and visualization decisioning.The LLM outputs its own rationale before the final query action (a Chain-of-Thought equivalent), which prevents hallucinated constraints in case of the conversion. Once that was done I handed off the implementation to Claude. 
+  I also worked to have fallback repair mechanism just because I realise that the output of the LLM can fail so a fallback is integral.
 
 ## Improvements 
 
