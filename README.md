@@ -209,8 +209,7 @@ I also was wary of what the constraints were so I have made certain assumptions 
 
 ## Example runs
 
-<Example 1>
-<summary>View Payload</summary>
+
 ```json 
 1. query : how has the number of trials for Pembrolizumab changed since 2015
 {
@@ -331,8 +330,10 @@ I also was wary of what the constraints were so I have made certain assumptions 
   }
 }
 ```
-</Example 1>
-2. how are cancer trials distributed across phases
+
+``` json 
+
+Query : how are cancer trials distributed across phases
 
 {
   "visualization": {
@@ -451,8 +452,11 @@ I also was wary of what the constraints were so I have made certain assumptions 
     "generated_at": "2026-05-10T07:33:20.109778Z"
   }
 }
+```
 
-3.show a network of sponsors to drugs for cancer trials
+``` json
+
+3. Query: show a network of sponsors to drugs for cancer trials
 
 {
   "visualization": {
@@ -674,3 +678,4 @@ I also was wary of what the constraints were so I have made certain assumptions 
     "generated_at": "2026-05-10T07:34:05.311027Z"
   }
 }
+```
