@@ -183,7 +183,9 @@ app/
 ```
 ### To run the frontend : 
 
+```bash
 uv run python -m frontend.app
+```
 
 ## Key Decisions : 
 The thought process involved into building this first required a thorough inspection of the endpoints and how they could be leveraged. I realised after a while that simple Natural language was not working and first needed to be translated into Essie Syntax Expression. Right now the primary interface is through the /Studies endpoint since that covers the majority of cases for a chat agent and inside it we have utilized the query parameters mainly since that was the main task. The filter parameters inside the application can also be leveraged but for now I felt to get to v1 this was a good checkpoint.
