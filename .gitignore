@@ -1,0 +1,33 @@
+# Secrets / local config
+.env
+.env.*
+!.env.example
+
+# Virtualenvs
+.venv/
+venv/
+
+# Python bytecode / build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code harness state
+.claude/
+
+# Scratch / smoke-test scripts
+_*.py
